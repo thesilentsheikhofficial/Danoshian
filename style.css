@@ -29,30 +29,39 @@ section {
     max-width: 1200px;
 }
 
-/* لیست مقام‌ها */
+/* بخش مقام‌ها */
 #ranks ul {
     list-style: none;
     padding: 0;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* وسط‌چین افقی */
-    gap: 20px;
+    flex-direction: column; /* ستونی */
+    align-items: center;   /* وسط‌چین */
+    gap: 15px;
 }
 
 #ranks li {
     background-color: #3b3b3b;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.7);
+    width: 300px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     cursor: pointer;
 }
 
 /* افکت هاور */
 #ranks li:hover {
-    transform: scale(1.1); /* کمی بزرگ شود */
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.9); /* نورانی شدن */
-    background-color: #444; /* کمی روشن‌تر شود */
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.9);
+    background-color: #444;
+}
+
+/* روزهای مربوط به مقام */
+.rank-days {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 5px;
 }
 
 /* کاپ‌ها */
