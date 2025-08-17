@@ -1,15 +1,17 @@
 /* style.css */
 
+/* تنظیمات پایه */
 body {
     font-family: Tahoma, sans-serif;
-    background-color: #1a1a1a; /* تیره */
-    color: #e0e0e0; /* روشن */
+    background-color: #1a1a1a; /* رنگ زمینه تیره */
+    color: #e0e0e0; /* رنگ متن روشن */
     margin: 0;
     padding: 0;
-    text-align: right; /* راست به چپ */
-    direction: rtl;
+    text-align: right;
+    direction: lft;
 }
 
+/* هدر */
 header {
     background-color: #282828;
     color: #f0f0f0;
@@ -22,6 +24,27 @@ header .logo {
     margin-top: 10px;
 }
 
+/* ناوبری */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffd700; /* طلایی هنگام هاور */
+}
+
+/* بخش‌ها */
 section {
     padding: 20px;
     margin: 20px auto;
@@ -31,32 +54,58 @@ section {
     max-width: 900px;
 }
 
+/* لیست مقام‌ها */
+#ranks ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* نمایش از بالا به پایین */
+    gap: 15px;
+    align-items: flex-end; /* راست‌چین */
+}
+
+#ranks li {
+    background-color: #3a3a3a;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#ranks li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.8);
+    background-color: #444;
+}
+
+/* کاپ‌ها و روزها */
 .cup-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end; /* راست چین کردن کارت‌ها */
+    flex-direction: column; /* بالا به پایین */
     gap: 15px;
+    align-items: flex-end; /* راست‌چین */
 }
 
 .cup {
     background-color: #3a3a3a;
-    border: 2px solid #555;
     border-radius: 12px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .cup:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+    background-color: #444;
 }
 
 .cup h3 {
-    margin: 10px 0 5px 0;
-    color: #ffd700; /* رنگ طلایی برای مقام‌ها */
-    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    color: #ffd700; /* طلایی */
+    font-size: 1.1rem;
 }
 
 .cup p {
@@ -65,18 +114,12 @@ section {
     color: #ccc;
 }
 
+/* فوتر */
 footer {
     background-color: #282828;
     color: #f0f0f0;
     padding: 15px 0;
     border-top: 2px solid #444;
     text-align: center;
-}
-
-/* استایل روزها */
-.cup-day {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.85rem;
-    color: #a0a0a0;
+    margin-top: 30px;
 }
